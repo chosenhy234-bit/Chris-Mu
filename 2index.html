@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chris Mu | Personal Website</title>
+
+<style>
+:root{
+    --bg:#f5fbfc;
+    --surface:#ffffff;
+    --primary:#4f8f9d;
+    --secondary:#8ec6c5;
+    --accent:#6ba7b5;
+    --text:#2d3b45;
+    --muted:#667b86;
+    --shadow:0 12px 35px rgba(40,90,110,.12);
+    --radius:18px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family: "Segoe UI",Arial,sans-serif;
+    background:linear-gradient(180deg,#f8fcfd,#eef8f8);
+    color:var(--text);
+    line-height:1.7;
+}
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    backdrop-filter:blur(14px);
+    background:rgba(255,255,255,.75);
+    border-bottom:1px solid rgba(0,0,0,.05);
+    z-index:1000;
+}
+
+.nav-container{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:16px 25px;
+}
+
+.logo{
+    font-size:1.35rem;
+    font-weight:700;
+    color:var(--primary);
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:28px;
+}
+
+nav a{
+    color:var(--text);
+    text-decoration:none;
+    font-weight:500;
+    transition:.25s;
+}
+
+nav a:hover{
+    color:var(--primary);
+}
+
+header{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:120px 20px 60px;
+}
+
+.hero{
+    max-width:1200px;
+    width:100%;
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:70px;
+    align-items:center;
+}
+
+.hero h1{
+    font-size:3.5rem;
+    margin-bottom:15px;
+}
+
+.hero h2{
+    color:var(--primary);
+    font-size:1.35rem;
+    margin-bottom:30px;
+    font-weight:600;
+}
+
+.hero p{
+    color:var(--muted);
+    font-size:1.08rem;
+}
+
+.photo-card{
+    background:var(--surface);
+    border-radius:24px;
+    padding:18px;
+    box-shadow:var(--shadow);
+}
+
+.photo-placeholder{
+    width:100%;
+    aspect-ratio:4/5;
+    border-radius:18px;
+    overflow:hidden;
+    background:#dfeef1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+}
+
+.photo-placeholder img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.photo-placeholder span{
+    position:absolute;
+    color:#5f7d87;
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+section{
+    max-width:1100px;
+    margin:auto;
+    padding:70px 20px;
+}
+
+.section-title{
+    font-size:2rem;
+    margin-bottom:30px;
+    color:var(--primary);
+}
+
+.card{
+    background:white;
+    border-radius:var(--radius);
+    padding:35px;
+    margin-bottom:28px;
+    box-shadow:var(--shadow);
+}
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+    margin-top:25px;
+}
+
+.skill{
+    background:#eef8f8;
+    padding:16px;
+    border-radius:12px;
+    text-align:center;
+    font-weight:600;
+    color:#40616c;
+}
+
+footer{
+    background:#dfeef1;
+    padding:40px 20px;
+    text-align:center;
+    margin-top:60px;
+}
+
+footer a{
+    color:var(--primary);
+    text-decoration:none;
+}
+
+@media(max-width:900px){
+
+.hero{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.hero h1{
+font-size:2.7rem;
+}
+
+nav ul{
+display:none;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+<div class="nav-container">
+<div class="logo">Chris Mu</div>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</div>
+</nav>
+
+<header>
+
+<div class="hero">
+
+<div>
+
+<h1>Chris Mu</h1>
+
+<h2>Aspiring Student &amp; Billiard Club Captain</h2>
+
+<p>
+Curious about how small changes shape the bigger world, I enjoy exploring economics,
+conducting research, and applying analytical thinking to real-life problems.
+Beyond academics, I value leadership, sustainability, and continuous learning,
+always looking for opportunities to make meaningful contributions.
+</p>
+
+</div>
+
+<div class="photo-card">
+
+<div class="photo-placeholder">
+
+<img src="photo.jpg"
+alt="Profile Photo"
+onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+
+<span style="display:none;">Place photo.jpg here</span>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="card">
+
+<p>
+My passion for economics began with something surprisingly ordinary: a meal at McDonald's. I noticed that the price of the familiar 12-yuan value meal gradually increased from 12 yuan to 12.9 yuan, and later to 13.9 yuan. As someone who frequently bought it because of its affordability, I naturally began asking why such a small change had happened. That simple observation opened the door to questions about production costs, supply and demand, pricing strategies, inflation, and consumer behavior.
+</p>
+
+<br>
+
+<p>
+Since then, I have enjoyed looking beyond everyday experiences to understand the economic logic that shapes them. Economics has taught me to think critically, analyze evidence, and approach problems with rationality instead of assumptions. What started as curiosity over the price of a meal has grown into a genuine academic passion and a desire to better understand how businesses, markets, and societies make decisions.
+</p>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="card">
+
+<p>
+My interests combine creativity with analytical thinking. Through experiences in music, dancing, and modeling, I have developed confidence, discipline, and strong communication skills that allow me to work comfortably in collaborative and public settings. These creative activities have strengthened my ability to express ideas while adapting to different environments and audiences.
+</p>
+
+<br>
+
+<p>
+Academically, I enjoy conducting market research and writing research papers, particularly in economics. I am experienced in gathering and analyzing data, interpreting consumer behavior, and applying both microeconomic and macroeconomic theories to practical business questions. I enjoy transforming observations into structured analysis and using evidence to support thoughtful conclusions.
+</p>
+
+<div class="skills-grid">
+
+<div class="skill">Music</div>
+<div class="skill">Dancing</div>
+<div class="skill">Modeling</div>
+<div class="skill">Market Research</div>
+<div class="skill">Academic Research</div>
+<div class="skill">Microeconomics</div>
+<div class="skill">Macroeconomics</div>
+<div class="skill">Theoretical Analysis</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="experience">
+
+<h2 class="section-title">Activities &amp; Background</h2>
+
+<div class="card">
+
+<p>
+As an international environmental volunteer in Bali, I participated in shoreline ecosystem restoration, marine plastic cleanup, and environmental education programs designed for local teenagers. Working alongside volunteers from different cultural backgrounds strengthened my teamwork, adaptability, and global perspective while reinforcing my commitment to sustainable development.
+</p>
+
+<br>
+
+<p>
+Beyond environmental service, I collaborated with charity fashion organizations to promote sustainable vintage fashion, encouraged plastic-free backstage practices during commercial events, and organized monthly community clothing donation campaigns to reduce textile waste. In parallel, I launched an independent market research project examining how different marketing strategies influence consumer behavior. By analyzing public reviews, comparing competing firms, and evaluating market performance, I developed a deeper understanding of strategic decision-making and evidence-based business analysis.
+</p>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">Contact</h2>
+
+<div class="card">
+
+<p>
+I am always happy to connect with educators, researchers, students, and professionals who share interests in economics, sustainability, research, or business.
+</p>
+
+<br>
+
+<p>
+<strong>Email</strong><br>
+<a href="mailto:muyujiachris@outlook.com">muyujiachris@outlook.com</a>
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 Chris Mu
+</p>
+
+<p style="margin-top:8px;color:#5b727c;">
+Designed with a Gentle Sea Breeze color palette.
+</p>
+
+</footer>
+
+<script>
+// Highlight active navigation link
+const sections=document.querySelectorAll("section");
+const navLinks=document.querySelectorAll("nav a");
+
+window.addEventListener("scroll",()=>{
+
+let current="";
+
+sections.forEach(section=>{
+const sectionTop=section.offsetTop-120;
+if(pageYOffset>=sectionTop){
+current=section.getAttribute("id");
+}
+});
+
+navLinks.forEach(link=>{
+link.style.color="";
+if(link.getAttribute("href")==="#"+current){
+link.style.color="#4f8f9d";
+}
+});
+
+});
+</script>
+
+</body>
+</html>
